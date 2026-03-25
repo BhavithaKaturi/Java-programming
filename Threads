@@ -1,0 +1,10 @@
+class T1 extends Thread {
+    public void run(){
+        try {
+            while(true){
+                System.out.println("Good Morning");
+                Thread.sleep(1000);
+            }
+        } catch(Exception e){}
+    }
+}
