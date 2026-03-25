@@ -1,0 +1,21 @@
+import java.sql.*;
+
+class JDBCExample {
+    public static void main(String[] args) throws Exception {
+        Connection con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/test", "root", "password");
+
+        Statement st = con.createStatement();
+
+        // Insert
+        st.executeUpdate("INSERT INTO student VALUES(1,'Bhavs')");
+
+        // Read
+        ResultSet rs = st.executeQuery("SELECT * FROM student");
+        while (rs.next()) {
+            System.out.println(rs.getInt(1) + " " + rs.getString(2));
+        }
+
+        con.close();
+    }
+}
