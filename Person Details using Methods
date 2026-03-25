@@ -1,0 +1,17 @@
+class Person {
+    void personalDetails() {
+        System.out.println("Name: Bhavs");
+        System.out.println("Age: 20");
+    }
+
+    void qualificationDetails() {
+        System.out.println("Degree: B.Tech");
+        System.out.println("Branch: CSE");
+    }
+
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.personalDetails();
+        p.qualificationDetails();
+    }
+}
