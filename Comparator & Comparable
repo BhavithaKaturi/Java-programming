@@ -1,0 +1,8 @@
+class Student implements Comparable<Student> {
+    int id;
+    Student(int id){ this.id=id; }
+
+    public int compareTo(Student s){
+        return this.id - s.id;
+    }
+}
